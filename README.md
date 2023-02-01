@@ -10,3 +10,5 @@
 + lazygit
 
 ![rice](example.png)
+
+Migrating to Void linux with DWM, will update afterwards...
