@@ -10,5 +10,5 @@ end
 local is_linux = has "linux"
 
 if is_linux then
-  require("linuxcp")
+  require("linux")
 end
