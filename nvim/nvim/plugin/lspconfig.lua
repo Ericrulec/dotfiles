@@ -74,7 +74,7 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
@@ -84,7 +84,16 @@ nvim_lsp.sourcekit.setup {
   capabilities = capabilities,
 }
 
-nvim_lsp.sumneko_lua.setup {
+local util = require("lspconfig.util")
+nvim_lsp.sqlls.setup {
+  on_attach = on_attach,
+  filetypes = { "sql", "mysql" },
+  root_dir = util.root_pattern ".sqllsrc.json",
+  capabilities = capabilities
+}
+
+
+nvim_lsp.lua_ls.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
@@ -105,13 +114,8 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
--- nvim_lsp.tailwindcss.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
-nvim_lsp.html.setup {
+nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
-  filetypes = { "javascript", "html" },
   capabilities = capabilities
 }
 
@@ -120,20 +124,10 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.pylsp.setup {
-  on_attach = on_attach,
-  filetypes = { "python" },
-  capabilities = capabilities
-}
-
-nvim_lsp.sqls.setup {
+nvim_lsp.astro.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
--- nvim_lsp.astro.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
