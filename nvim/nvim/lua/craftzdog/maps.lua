@@ -17,6 +17,7 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 keymap.set('n', 'te', ':tabedit')
 keymap.set("n", "<C-I>", "<C-I>", { noremap = true })
+keymap.set("n", "<C-P>", "<C-I>")
 
 -- New tab
 

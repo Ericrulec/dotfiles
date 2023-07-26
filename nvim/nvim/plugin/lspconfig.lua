@@ -90,11 +90,21 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.graphql.setup {
+  on_attach = on_attach,
+  filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
+  capabilities = capabilities,
+}
+
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
 
+nvim_lsp.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 nvim_lsp.lua_ls.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
@@ -122,6 +132,11 @@ nvim_lsp.cssls.setup {
 }
 
 nvim_lsp.ltex.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.svelte.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
