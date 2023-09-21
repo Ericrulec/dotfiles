@@ -3,12 +3,12 @@ gui:
   windowSize: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   scrollHeight: 2 # how many lines you scroll by
   scrollPastBottom: true # enable scrolling past the bottom
-  sidePanelWidth: 0.3333 # number from 0 to 1
-  expandFocusedSidePanel: false
+  sidePanelWidth: 0.2 # number from 0 to 1
+  expandFocusedSidePanel: true
   mainPanelSplitMode: "flexible" # one of 'horizontal' | 'flexible' | 'vertical'
   language: "en" # one of 'auto' | 'en' | 'zh' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
   timeFormat: "02 Jan 06" # https://pkg.go.dev/time#Time.Format
-  shortTimeFormat: "3:04PM"
+  shortTimeFormat: "13:00"
   theme:
     activeBorderColor:
       - green
@@ -47,9 +47,10 @@ gui:
   showIcons: false # deprecated: use nerdFontsVersion instead
   nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
   commandLogSize: 8
-  splitDiff: "always" # one of 'auto' | 'always'
+  splitDiff: "auto" # one of 'auto' | 'always'
   skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
   border: "single" # one of 'single' | 'double' | 'rounded' | 'hidden'
+  notARepository: "skip"
 git:
   paging:
     colorArg: always
