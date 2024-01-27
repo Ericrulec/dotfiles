@@ -1,0 +1,33 @@
+import = ["./themes/themes/github_dark_colorblind.yaml"]
+[font]
+size = 20.0
+
+[font.bold]
+family = "Iosevka NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "Iosevka NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "Iosevka NF"
+style = "Italic"
+
+[font.normal]
+family = "Iosevka NF"
+style = "Regular"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[[keyboard.bindings]]
+chars = "\u001B[105;5u"
+key = "I"
+mods = "Control"
+
+[window]
+decorations = "none"
+dynamic_title = false
+opacity = 1
