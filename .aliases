@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+### ALIASES ###
+
+alias vim="nvim"
+alias lg="lazygit"
+alias grep='grep --color=auto'
+
+# Changing ls -> exa 
+alias ls="exa -al --color=always --group-directories-first" # all files akin to ls -al
+alias la="exa -a --color=always --group-directories-first" # all files and dirs without file-info
+alias l.="exa -a | egrep '^\.'" # all dotfiles
+
+# Other aliases 
+alias zshconfig="nvim ~/.zshrc"
+alias nvimconfig="nvim ~/.config/nvim/."
+alias portfolio="cd ~/workspace/golang/gohtmx"
+alias work="cd ~/workspace/golang/interpreter"
+alias haskel='cd ~/workspace/golang/haskell-interpreter'
+alias addssh="eval $(ssh-agent -s)"
+alias prettyjson="python -m json.tool"
+alias sortprettyjson="python -m json.tool --sort-keys"
+alias modmanager="r2modman --no-sandbox"
+alias liststartupfiles="/bin/bash -lixc exit 2>&1 | sed -n 's/^+* \(source\|\.\) //p'"

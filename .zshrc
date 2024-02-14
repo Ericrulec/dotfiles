@@ -10,13 +10,16 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="juanghurtado"
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-source $ZSH/oh-my-zsh.sh
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
  else
    export EDITOR='nvim'
  fi
+export EDITOR=nvim
 
 # Color manpages
 man() {
@@ -37,32 +40,10 @@ zstyle :omz:plugins:ssh-agent agent-forwarding yes
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-export EDITOR=nvim
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-alias ll='ls -lav --ignore=..'
-alias l='ls -lav --ignore=.?*'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-
-# Example aliases
- alias vim="nvim"
- alias lg="lazygit"
- alias zshconfig="nvim ~/.zshrc"
- alias nvimconfig="nvim ~/.config/nvim/."
- alias portfolio="cd ~/workspace/golang/gohtmx"
- alias work="cd ~/workspace/golang/interpreter"
- alias haskel='cd ~/workspace/golang/haskell-interpreter'
- alias addssh="eval $(ssh-agent -s)"
- alias prettyjson="python -m json.tool"
- alias sortprettyjson="python -m json.tool --sort-keys"
- alias modmanager="r2modman --no-sandbox"
- alias liststartupfiles="/bin/bash -lixc exit 2>&1 | sed -n 's/^+* \(source\|\.\) //p'"
-
-source $ZSH/oh-my-zsh.sh
 
 
 # Created by `pipx` on 2024-01-23 20:20:34
 export PATH="$PATH:/home/erik/.local/bin"
+source $ZSH/oh-my-zsh.sh
+# Source my aliases
+source $HOME/.aliases
