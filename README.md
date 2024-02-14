@@ -1,6 +1,6 @@
-# dotfiles
+<h1 align="middle">Dotfiles</h1>
 
-**Endeavour OS**
+**Arch Linux**
 
 - alacritty
 - zsh (oh-my-zsh)
@@ -10,7 +10,30 @@
 - tmux
 - ranger
 - lazygit
+- zathura
+- mpv
 
-![rice](wallpapers/example.png)
+## Clone and Install
 
-Migrating to Void linux for now, will also try out a minimal DWM setup. Will update when I feel like it...
+```sh
+# Clone from home folder
+$ git clone git@github.com:Ericrulec/dotfiles.git
+
+# Move into dotfiles
+$ cd dotfiles
+
+# Symlink homefolder/dotfiles/* -> homefolder/*, equivalent to $ ln -s <src> <dest>
+$ stow .
+
+```
+
+## Dependencies
+
+```sh
+# Install with your preferred package-manager
+
+git-delta
+
+```
+
+![rice](wallpapers/rice.png)
