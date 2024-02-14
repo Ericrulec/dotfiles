@@ -32,7 +32,7 @@ $ stow .
 ```sh
 # Install with your preferred package-manager
 
-git-delta
+git-delta exa
 
 ```
 
