@@ -1,5 +1,5 @@
 [user]
-	name = Erik Jensson
+  name = Erik Jensson
   email = erik@jensson.no
 [alias]
   subup = submodule update --init --recursive

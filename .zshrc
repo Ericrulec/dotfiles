@@ -59,6 +59,7 @@ PS1='[\u@\h \W]\$ '
  alias prettyjson="python -m json.tool"
  alias sortprettyjson="python -m json.tool --sort-keys"
  alias modmanager="r2modman --no-sandbox"
+ alias liststartupfiles="/bin/bash -lixc exit 2>&1 | sed -n 's/^+* \(source\|\.\) //p'"
 
 source $ZSH/oh-my-zsh.sh
 
