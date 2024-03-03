@@ -1,0 +1,6 @@
+Host <SSH-HOSTNAME>
+    HostName <IP>
+    SetEnv TERM=xterm-256color
+
+Host localhost
+    UserKnownHostsFile /dev/null
