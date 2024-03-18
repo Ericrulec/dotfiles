@@ -7,7 +7,7 @@ alias lg="lazygit"
 alias grep='grep --color=auto'
 
 # Changing ls -> exa -- switch out with eza
-alias ls="exa -al --color=always --group-directories-first" # all files akin to ls -al
+alias ls="exa --icons -al --color=always --group-directories-first" # all files akin to ls -al
 alias la="exa -a --color=always --group-directories-first" # all files and dirs without file-info
 alias l.="exa -a | egrep '^\.'" # all dotfiles
 
