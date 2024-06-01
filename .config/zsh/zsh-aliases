@@ -1,0 +1,41 @@
+#!/bin/zsh
+
+### ALIASES ###
+
+# Common
+alias vim="nvim"
+alias lg="lazygit"
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias cat="bat"
+
+# Get top process eating memory
+alias psmem="ps auxf | sort -nr -k 4 | head -5"
+# Get top process eating cpu
+alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+
+# Changing ls -> exa -- switch out with eza
+alias ls="exa --icons -al --color=always --group-directories-first" # all files akin to ls -al
+alias la="exa -a --color=always --group-directories-first" # all files and dirs without file-info
+alias l.="exa -a | egrep '^\.'" # all dotfiles
+
+# Systemd
+alias list_systemctl="ssytemctl list-unit-files --state=enbaled"
+
+# Arch linux
+alias archlinux-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key -refresh-keys"
+
+# Other aliases 
+alias zshrc="nvim $HOME/.config/zsh/."
+alias nvimrc="nvim $HOME/.config/nvim/."
+alias portfolio="cd $HOME/workspace/golang/gohtmx"
+alias work="cd $HOME/workspace/golang/interpreter"
+alias haskel='cd $HOME/workspace/golang/haskell-interpreter'
+alias addssh="eval $(ssh-agent -s)"
+alias prettyjson="python -m json.tool"
+alias sortprettyjson="python -m json.tool --sort-keys"
+alias modmanager="r2modman --no-sandbox"
+alias liststartupfiles="/bin/bash -lixc exit 2>&1 | sed -n 's/^+* \(source\|\.\) //p'"
+alias mountgaming="sudo mount /dev/sda1 /archive"
