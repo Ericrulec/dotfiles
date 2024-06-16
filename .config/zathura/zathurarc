@@ -1,12 +1,13 @@
 # MY CONFIG
-#set selection-clipboard clipboard
-#set recolor true
+set selection-clipboard clipboard
 #set recolor-darkcolor "#dcdccc"
 #set recolor-lightcolor "rgba(36, 40, 59, 0.6)"
-
 #set recolor-lightcolor "#181818"
 
 set recolor "true"
 set default-bg rgba(0,0,0,0.7)
 set recolor-lightcolor rgba(0,0,0,0)
 set adjust-open "width"
+
+map j feedkeys "<C-Down>"
+map k feedkeys "<C-Up>"
