@@ -1,6 +1,6 @@
-import = ["./themes/themes/github_dark_colorblind.yaml"]
+#import = ["./themes/themes/github_dark_colorblind.yaml"]
 [font]
-size = 17.0
+size = 14.0
 
 [font.bold]
 family = "Iosevka NF"
@@ -34,3 +34,5 @@ opacity = 0.7
 
 [colors]
 transparent_background_colors = true
+[colors.primary]
+background = "#161619"
