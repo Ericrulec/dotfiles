@@ -20,6 +20,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
    export EDITOR='nvim'
  fi
 export EDITOR=nvim
+export MANPAGER="nvim +Man!"
 
 # Color manpages
 man() {
@@ -44,6 +45,17 @@ zstyle :omz:plugins:ssh-agent agent-forwarding yes
 
 # Created by `pipx` on 2024-01-23 20:20:34
 export PATH="$PATH:/home/erik/.local/bin"
+
 source $ZSH/oh-my-zsh.sh
+
 # Source my aliases
 source $HOME/.aliases
+
+# bun completions
+[ -s "/home/erik/.bun/_bun" ] && source "/home/erik/.bun/_bun"
+
+#(cat ~/.cache/wal/sequences &)
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

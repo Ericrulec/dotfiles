@@ -13,11 +13,12 @@
   diffFilter = delta --color-only --features=interactive
 
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 
 [delta]
   features = decorations
-  side-by-side = true
+  side-by-side = false
+  line-numbers = true
 
 [delta "interactive"]
   keep-plus-minus-markers = false
@@ -30,3 +31,5 @@
   hunk-header-file-style = red
   hunk-header-line-number-style = "#067a00"
   hunk-header-style = file line-number syntax
+[init]
+	defaultBranch = main

@@ -30,9 +30,12 @@ mods = "Control"
 [window]
 decorations = "none"
 dynamic_title = false
-opacity = 0.7 
+opacity = 1
 
 [colors]
 transparent_background_colors = true
 [colors.primary]
-background = "#161619"
+#background = "#161619"
+background = "#090f17"
+dim_foreground    = '#dbdbdb'
+bright_foreground = '#d9d9d9'

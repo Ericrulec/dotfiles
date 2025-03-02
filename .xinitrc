@@ -13,6 +13,7 @@ fi
 
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
+[ -f ~/.profile ] && . ~/.profile
 
 if [ -f $sysmodmap ]; then
     xmodmap $sysmodmap
